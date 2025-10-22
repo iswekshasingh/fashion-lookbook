@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffafc;
+    color: #333;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-family: 'CMU serif', serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #c95c76;
+}
+
+.hero {
+    position: relative;
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero img {
+    width:100%;
+    height:auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.collections {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.collections h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 30px; /* space between cards */
+  justify-items: center; /* centers cards horizontallyyyyy */
+  align-items: center; /* aligns verticallyyyy */
+  max-width: 1000px; /* keeps layout in center */
+  margin: 0 auto; /* centers the full grid */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    height: 380px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain; /* shows full image */
+  background-color: #f9f9f9; /* subtle neutral fill */
+  display: block;
+  border-radius: 12px; /* rounded corners */
+  margin-top: 10px; /* small top spacing */
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.card p {
+    padding: 10px;
+    font-weight: 500;
+    color: #c95c76;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
