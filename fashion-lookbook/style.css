@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffafc;
+    color: #333;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-family: 'CMU serif', serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #c95c76;
+}
+
+.hero {
+    position: relative;
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero img {
+    width:100%;
+    height:auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.collections {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.collections h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
+  justify-items: center; 
+  align-items: center; 
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
+
+.card {
+    display: block;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    height: 380px;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    text-decoration: none; 
+    color: inherit;         
+}
+
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain; 
+  background-color: #f9f9f9; 
+  display: block;
+  border-radius: 12px; 
+  margin-top: 10px; 
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.card p {
+    padding: 10px;
+    font-weight: 500;
+    color: #c95c76;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fffafc;
+  z-index: 9999;
+  opacity: 1;
+  animation: fadeOut 0.8s ease forwards;
+  pointer-events: none;
+
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+
+
+.collection-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.collection-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(85%);
+}
+
+.collection-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 12px;
+}
+
+.collection-hero-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.collection-hero-text p {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+
+.pinterest-grid {
+  column-count: 4;          
+  column-gap: 20px;         
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.pin {
+  margin-bottom: 20px;
+  break-inside: avoid;      
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pin:hover {
+  transform: scale(1.03);
+}
+
+.pin img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+@media (max-width: 1024px) {
+  .pinterest-grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .pinterest-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .pinterest-grid {
+    column-count: 1;
+  }
+
+  .collection-hero-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; 
+}
+
+.about-hero {
+  background: url('images/about-bg.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.about-hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.about-hero-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-hero-text p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+
+.about-section {
+  padding: 80px 20px;
+  background-color: #fffafc;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 320px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1;
+  max-width: 500px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-text h3 {
+  font-family: 'Playfair Display', serif;
+  color: #c95c76;
+  margin-bottom: 15px;
+}
+
+
+.style-values {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.style-values h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+
+.value:hover {
+  transform: translateY(-6px);
+}
+
+.value h3 {
+  color: #c95c76;
+  margin-bottom: 10px;
+}
+
+
+.about-cta {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.about-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.about-cta .btn-shop {
+  background-color: #c95c76;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.about-cta .btn-shop:hover {
+  background-color: #a94560;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+
